@@ -12,19 +12,12 @@ public class FullTimeEmp extends Employee {
     }
 
     @Override
-    public double calculateMonthlyPay() {
-        return salary / 12; // Monthly salary (annual divided by 12)
-    }
-
-    @Override
     public double getMonthlyPay() {
-        return calculateMonthlyPay();
+        return salary;
     }
 
     @Override
     public String toString() {
-        return super.toString() + " - " + getStatus() + 
-               "\nAnnual Salary: $" + String.format("%,.2f", salary) +
-               "\nMonthly Pay: $" + String.format("%,.2f", getMonthlyPay());
+        return super.toString() + " - " + getStatus() +  "\nMonthly Pay: $" + String.format("%,.2f", getMonthlyPay());
     }
 }

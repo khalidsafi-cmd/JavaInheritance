@@ -9,10 +9,9 @@ public class PartTimeEmp extends Employee {
     }
 
     public void addToHours(int amount) {
-        if (amount > 0) {
-            this.hours += amount;
-        }
+            this.hours = hours + amount;
     }
+    
 
     @Override
     public double calculateMonthlyPay() {
@@ -29,11 +28,11 @@ public class PartTimeEmp extends Employee {
         return calculateMonthlyPay();
     }
 
-    @Override
+      @Override
     public String toString() {
-        return super.toString() + " - " + getStatus() + 
-               "\nHours Worked: " + hours + 
-               "\nHourly Rate: $" + String.format("%,.2f", hourlyRate) + 
-               "\nMonthly Pay: $" + String.format("%,.2f", getMonthlyPay());
+        return super.toString() + " - " + getStatus() +
+               "\nHours Worked: " + hours +
+               "\nHourly Rate: $" + hourlyRate +
+               "\nMonthly Pay: $" + getMonthlyPay();
     }
 }
